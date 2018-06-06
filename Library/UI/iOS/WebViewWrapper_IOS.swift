@@ -15,7 +15,7 @@ final class WebViewWrapperIOS: UIView {
         
         webView.frame = CGRect(
             x: bounds.minX,
-            y: bounds.minY + 44,
+            y: bounds.minY,
             width: bounds.width,
             height: bounds.height - 44
         )

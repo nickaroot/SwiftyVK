@@ -21,11 +21,16 @@ final class WebControllerIOS: UIViewController, WKNavigationDelegate, WebControl
         webView?.webView.navigationDelegate = self
         preloader?.color = .lightGray
         preloader?.hidesWhenStopped = true
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         onDismiss?()
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     func load(urlRequest: URLRequest, onResult: @escaping (WebControllerResult) -> ()) {
@@ -64,14 +69,24 @@ final class WebControllerIOS: UIViewController, WKNavigationDelegate, WebControl
         onResult?(.error(.authorizationCancelled))
     }
     
-    @IBAction func reloadPressed(_ sender: Any) {
+    @IBAction func hostnamePressed(_ sender: Any) {
         reload()
+    }
+    
+    @IBAction func reloadPressed(_ sender: Any) {
+        webView?.webView.reload()
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation?) {
         preloader?.stopAnimating()
         onResult?(.response(webView.url))
-        hostname?.title = webView.url?.host
+//        hostname?.title = webView.url?.host
+        
+//        let label = UILabel()
+//        label.text = webView.url?.host
+//        label.textColor = .white
+//        label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
+//        hostname?.customView = label
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation?, withError error: Error) {

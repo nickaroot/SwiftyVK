@@ -1601,7 +1601,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 				TargetAttributes = {
 					A21F10B81DCDFCF6003EFDDC = {
 						CreatedOnToolsVersion = 8.1;
@@ -1624,12 +1624,13 @@
 					};
 					A2EB6E9A1BD180DD008E7D86 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 842SSJ357W;
+						DevelopmentTeam = Y7BEBZQYA6;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					A2EB6EA71BD180E9008E7D86 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 842SSJ357W;
+						DevelopmentTeam = Y7BEBZQYA6;
 						DevelopmentTeamName = "Алексей Кудрявцев (Personal Team)";
 						LastSwiftMigration = 0900;
 					};
@@ -2721,11 +2722,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2750,8 +2754,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "WE-St0r.SwiftyVK";
+				PRODUCT_BUNDLE_IDENTIFIER = nickaroot.SwiftyVK;
 				PRODUCT_NAME = SwiftyVK;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -2779,11 +2784,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2802,8 +2810,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "WE-St0r.SwiftyVK";
+				PRODUCT_BUNDLE_IDENTIFIER = nickaroot.SwiftyVK;
 				PRODUCT_NAME = SwiftyVK;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -2839,6 +2848,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2864,7 +2874,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "WE-St0r.SwiftyVK";
+				PRODUCT_BUNDLE_IDENTIFIER = nickaroot.SwiftyVK;
 				PRODUCT_NAME = SwiftyVK;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -2899,6 +2909,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2918,7 +2929,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "WE-St0r.SwiftyVK";
+				PRODUCT_BUNDLE_IDENTIFIER = nickaroot.SwiftyVK;
 				PRODUCT_NAME = SwiftyVK;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

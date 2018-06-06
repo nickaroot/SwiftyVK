@@ -29,6 +29,7 @@ final class VKDelegateExample: SwiftyVKDelegate {
             }
         #elseif os(iOS)
             if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+                viewController.modalPresentationCapturesStatusBarAppearance = true
                 rootController.present(viewController, animated: true)
             }
         #endif

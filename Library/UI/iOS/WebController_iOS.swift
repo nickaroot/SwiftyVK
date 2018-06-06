@@ -5,6 +5,7 @@ final class WebControllerIOS: UIViewController, WKNavigationDelegate, WebControl
     
     @IBOutlet private weak var webView: WebViewWrapperIOS?
     @IBOutlet private weak var preloader: UIActivityIndicatorView?
+    @IBOutlet private weak var hostname: UIBarButtonItem?
     
     private var currentRequest: URLRequest?
     private var onResult: ((WebControllerResult) -> ())?
@@ -13,9 +14,9 @@ final class WebControllerIOS: UIViewController, WKNavigationDelegate, WebControl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = .clear
-        webView?.layer.cornerRadius = 15
+        webView?.layer.cornerRadius = 0
         webView?.clipsToBounds = true
-        webView?.layer.borderWidth = 1 / UIScreen.main.nativeScale
+        webView?.layer.borderWidth = 0 / UIScreen.main.nativeScale
         webView?.layer.borderColor = UIColor.lightGray.cgColor
         webView?.webView.navigationDelegate = self
         preloader?.color = .lightGray
@@ -59,13 +60,18 @@ final class WebControllerIOS: UIViewController, WKNavigationDelegate, WebControl
         }
     }
     
-    @IBAction func cancellPressed(_ sender: Any) {
+    @IBAction func cancelPressed(_ sender: Any) {
         onResult?(.error(.authorizationCancelled))
+    }
+    
+    @IBAction func reloadPressed(_ sender: Any) {
+        reload()
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation?) {
         preloader?.stopAnimating()
         onResult?(.response(webView.url))
+        hostname?.title = webView.url?.host
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation?, withError error: Error) {
